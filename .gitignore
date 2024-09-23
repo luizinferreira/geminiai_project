@@ -1,0 +1,4 @@
+##ARQUIVOS A SEREM IGNORADOS
+
+backend/node_modules
+.env
