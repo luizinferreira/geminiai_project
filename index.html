@@ -1,20 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Testando API do Google Generative AI</title>
+  <title>Seu dia Perfeito - Google Generative AI</title>
   <link rel="stylesheet" href="./css/styles.css"> <!-- Link para o arquivo CSS (opcional) -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery -->
   <script src="./js/script.js"></script> <!-- Script personalizado -->
 </head>
 <body>
-
+  <h1>Seu dia Perfeito</h1>
+  <p>
+    Descubra como fazer o melhor uso do seu tempo hoje! Responda a algumas perguntas
+    simples e nós planejaremos o seu dia perfeito. 
+  </p>
   <form id="aiForm">
-    <label for="prompt">Escreva um prompt:</label><br>
-    <input type="text" id="prompt" name="prompt" placeholder="Write a story about a magic backpack." required><br><br>
-    <button type="submit">Gerar Conteúdo</button>
+    <label for="prompt">Como está seu Humor hoje?</label><br>
+    <input type="text" id="prompt-humor" name="prompt-humor" placeholder="Me fale do seu Humor hoje" required><br><br>
+    
+    <label for="prompt-tempo">Quanto tempo você tem disponível?</label><br>
+    <input type="text" id="prompt-tempo" name="prompt-tempo" placeholder="Pode me informar horas, minutos..." required><br><br>
+
+    <label for="prompt-atividade">Me conte sua atividade favorita</label><br>
+    <input type="text" id="prompt-atividade" name="prompt-atividade" placeholder="Pode ser mais que duas atividades" required><br><br>
+    
+    <label for="prompt-orcamento">E por ultimo, mas não menos importante, qual o seu orçamento para hoje?</label><br>
+    <select name="prompt-orcamento" id="prompt-orcamento">
+      <option value="Alto">Alto</option>
+      <option value="Medio">Médio</option>
+      <option value="Baixo">Baixo</option>
+    </select><br><br>
+    
+    
+    <button type="submit">Gerar Ideia</button>
+
   </form>
+
+  <p id="msg-body"></p>
 
 </body>
 </html>
